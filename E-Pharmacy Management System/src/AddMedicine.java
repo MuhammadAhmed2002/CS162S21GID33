@@ -108,6 +108,11 @@ public class AddMedicine extends javax.swing.JFrame {
         vatCheck.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         vatCheck.setForeground(new java.awt.Color(228, 241, 254));
         vatCheck.setText("VAT");
+        vatCheck.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                vatCheckActionPerformed(evt);
+            }
+        });
 
         bDelete.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         bDelete.setText("DELETE");
@@ -333,16 +338,111 @@ public class AddMedicine extends javax.swing.JFrame {
 
     private void bDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDeleteActionPerformed
 
-        
+         DefaultTableModel model = (DefaultTableModel) tblProduct.getModel();
+        if(tblProduct.getSelectedRow() == -1){
+            if(tblProduct.getRowCount() == 0){
+                IMessage.setText("Table is Empty.");
+            }
+            else
+            {
+                IMessage.setText("You must Selected a Product.");
+            }
+        }
+        else
+        {
+            model.removeRow(tblProduct.getSelectedRow());
+        }
     }//GEN-LAST:event_bDeleteActionPerformed
 
     private void bUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bUpdateActionPerformed
 
-     
+      DefaultTableModel model = (DefaultTableModel) tblProduct.getModel();
+        if(tblProduct.getSelectedRow() == -1){
+            if(tblProduct.getRowCount() == 0){
+                IMessage.setText("Table is Empty.");
+            }
+            else
+            {
+                IMessage.setText("You must Selected a Product.");
+            }
+        }
+        else
+        {
+            model.setValueAt(tfID.getText(), tblProduct.getSelectedRow(), 0);
+            model.setValueAt(cbCategory.getSelectedItem().toString(), tblProduct.getSelectedRow(), 1);
+            model.setValueAt(tfPrice.getText(), tblProduct.getSelectedRow(), 2);
+            model.setValueAt(tfCompany.getText(), tblProduct.getSelectedRow(), 3);
+            model.setValueAt(tfQntty.getText(), tblProduct.getSelectedRow(), 4);
+        }
     }//GEN-LAST:event_bUpdateActionPerformed
 
     private void bAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAddActionPerformed
-      
+    
+         String ID = tfID.getText().toString();
+        String Category = cbCategory.getSelectedItem().toString();
+        String Price = tfPrice.getText().toString();
+        String Company = tfCompany.getText().toString();
+        String Quantity = tfQntty.getText().toString();
+       
+        try{
+            FileWriter writer = new FileWriter("AddMedicine.txt",true);
+            writer.write("\n");
+            writer.write("Medicine ID:");
+            
+            writer.write(ID);
+           
+            writer.write(",");
+            writer.write("\n");
+            writer.write("Medicine Category:");
+            
+            writer.write(Category);
+           
+            writer.write(",");
+            writer.write("\n");
+            writer.write("Medicine Price:");
+            
+            writer.write(Price);
+           
+            writer.write(",");
+            writer.write("\n");
+            writer.write("Medicine Company:");
+            
+            writer.write(Company);
+           
+            writer.write(",");
+            writer.write("\n");
+            writer.write("Medicine Quantity:");
+            
+            writer.write(Quantity);
+           
+            writer.write(",");
+             writer.close();
+            JOptionPane.showMessageDialog(rootPane, "success");
+            setVisible(false);
+            new AddMedicine().setVisible(true);
+            
+            
+        }catch(Exception e)
+        {
+                        JOptionPane.showMessageDialog(rootPane, "Error");
+
+        }
+         IMessage.setText(" ");
+         int total = 0;
+      int vat = 0;
+      int sum = 0;
+     
+       DefaultTableModel model = (DefaultTableModel) tblProduct.getModel();
+      if(vatCheck.isSelected()){
+           vat = 10;
+      }
+        if(!tfID.getText().trim().equals("")){
+            model.addRow(new Object[] {tfID.getText(),cbCategory.getSelectedItem().toString(),tfPrice.getText(),tfCompany.getText(),tfQntty.getText(),vat});
+        }
+        else{
+            IMessage.setText("The product Name Should not be left blank");
+        }
+ 
     }//GEN-LAST:event_bAddActionPerformed
 
     private void tblProductMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblProductMouseClicked
@@ -352,14 +452,27 @@ public class AddMedicine extends javax.swing.JFrame {
 
     private void bBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBackMouseClicked
 
-       
+       MedicineMenu medimnu = new MedicineMenu();
+        medimnu.setVisible(true);
+        medimnu.pack();
+        medimnu.setLocationRelativeTo(null);
+        medimnu.setDefaultCloseOperation(Login.EXIT_ON_CLOSE);
+        medimnu .dispose();
     }//GEN-LAST:event_bBackMouseClicked
 
     private void bResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bResetActionPerformed
-
+        tfID.setText(null);
+        cbCategory.setSelectedItem(null);
+        tfPrice.setText(null);
+        tfCompany.setText(null);
+        tfQntty.setText(null);
        
 
     }//GEN-LAST:event_bResetActionPerformed
+
+    private void vatCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vatCheckActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_vatCheckActionPerformed
 
     /**
      * @param args the command line arguments
