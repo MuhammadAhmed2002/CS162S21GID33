@@ -4,10 +4,7 @@
  * and open the template in the editor.
  */
 
-/**
- *
- * @author Akram
- */
+
 public class HomePage extends javax.swing.JFrame {
 
     /**
@@ -39,14 +36,14 @@ public class HomePage extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(103, 128, 159));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel2.setText("Pharmacy Management System");
+        jLabel2.setText("E-Pharmacy Management System");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap(199, Short.MAX_VALUE)
+                .addContainerGap(174, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addGap(252, 252, 252))
         );
@@ -149,6 +146,7 @@ public class HomePage extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        
      
        
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -160,7 +158,7 @@ public class HomePage extends javax.swing.JFrame {
     }//GEN-LAST:event_jTBLOGOUTMouseClicked
 
     private void jButtonMedecineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMedecineActionPerformed
-
+        
     }//GEN-LAST:event_jButtonMedecineActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

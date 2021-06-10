@@ -1,6 +1,3 @@
 
 Medicine ID:11,
-Medicine Category:Histachin,
 Medicine Price:11,
-Medicine Company:ss,
-Medicine Quantity:4,

@@ -305,7 +305,7 @@ public class Login extends javax.swing.JFrame {
 
         else
         {
-            JOptionPane.showMessageDialog(null,"<USER NAME AND PASSWORD WRONG PLEASE TRY AGAIN LATER>");
+            JOptionPane.showMessageDialog(null,"USER NAME AND PASSWORD WRONG PLEASE TRY AGAIN LATER>");
             jUserName.setText(null);
             jPasswordField1.setText(null);
         }

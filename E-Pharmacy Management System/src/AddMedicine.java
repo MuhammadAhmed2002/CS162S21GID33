@@ -16,7 +16,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Akram
+ * @author mohsin
  */
 public class AddMedicine extends javax.swing.JFrame {
 
@@ -40,7 +40,7 @@ public class AddMedicine extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jLabel5 = new javax.swing.JLabel();
-        tfID = new javax.swing.JTextField();
+        ProductID = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         cbCategory = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
@@ -88,6 +88,12 @@ public class AddMedicine extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(228, 241, 254));
         jLabel5.setText("Product ID: ");
+
+        ProductID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ProductIDActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(228, 241, 254));
@@ -188,7 +194,7 @@ public class AddMedicine extends javax.swing.JFrame {
         });
 
         jDesktopPane1.setLayer(jLabel5, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(tfID, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(ProductID, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(cbCategory, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -265,7 +271,7 @@ public class AddMedicine extends javax.swing.JFrame {
                     .addGap(18, 18, 18)
                     .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(cbCategory, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(tfID, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
+                        .addComponent(ProductID, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
                         .addComponent(tfPrice, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE))
                     .addContainerGap(530, Short.MAX_VALUE)))
         );
@@ -308,7 +314,7 @@ public class AddMedicine extends javax.swing.JFrame {
             .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jDesktopPane1Layout.createSequentialGroup()
                     .addGap(40, 40, 40)
-                    .addComponent(tfID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ProductID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(18, 18, 18)
                     .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel1)
@@ -338,110 +344,19 @@ public class AddMedicine extends javax.swing.JFrame {
 
     private void bDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDeleteActionPerformed
 
-         DefaultTableModel model = (DefaultTableModel) tblProduct.getModel();
-        if(tblProduct.getSelectedRow() == -1){
-            if(tblProduct.getRowCount() == 0){
-                IMessage.setText("Table is Empty.");
-            }
-            else
-            {
-                IMessage.setText("You must Selected a Product.");
-            }
-        }
-        else
-        {
-            model.removeRow(tblProduct.getSelectedRow());
-        }
+        
     }//GEN-LAST:event_bDeleteActionPerformed
 
     private void bUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bUpdateActionPerformed
 
-      DefaultTableModel model = (DefaultTableModel) tblProduct.getModel();
-        if(tblProduct.getSelectedRow() == -1){
-            if(tblProduct.getRowCount() == 0){
-                IMessage.setText("Table is Empty.");
-            }
-            else
-            {
-                IMessage.setText("You must Selected a Product.");
-            }
-        }
-        else
-        {
-            model.setValueAt(tfID.getText(), tblProduct.getSelectedRow(), 0);
-            model.setValueAt(cbCategory.getSelectedItem().toString(), tblProduct.getSelectedRow(), 1);
-            model.setValueAt(tfPrice.getText(), tblProduct.getSelectedRow(), 2);
-            model.setValueAt(tfCompany.getText(), tblProduct.getSelectedRow(), 3);
-            model.setValueAt(tfQntty.getText(), tblProduct.getSelectedRow(), 4);
-        }
+     
     }//GEN-LAST:event_bUpdateActionPerformed
 
     private void bAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAddActionPerformed
     
-         String ID = tfID.getText().toString();
-        String Category = cbCategory.getSelectedItem().toString();
-        String Price = tfPrice.getText().toString();
-        String Company = tfCompany.getText().toString();
-        String Quantity = tfQntty.getText().toString();
-       
-        try{
-            FileWriter writer = new FileWriter("AddMedicine.txt",true);
-            writer.write("\n");
-            writer.write("Medicine ID:");
+         
             
-            writer.write(ID);
-           
-            writer.write(",");
-            writer.write("\n");
-            writer.write("Medicine Category:");
-            
-            writer.write(Category);
-           
-            writer.write(",");
-            writer.write("\n");
-            writer.write("Medicine Price:");
-            
-            writer.write(Price);
-           
-            writer.write(",");
-            writer.write("\n");
-            writer.write("Medicine Company:");
-            
-            writer.write(Company);
-           
-            writer.write(",");
-            writer.write("\n");
-            writer.write("Medicine Quantity:");
-            
-            writer.write(Quantity);
-           
-            writer.write(",");
-             writer.close();
-            JOptionPane.showMessageDialog(rootPane, "success");
-            setVisible(false);
-            new AddMedicine().setVisible(true);
-            
-            
-        }catch(Exception e)
-        {
-                        JOptionPane.showMessageDialog(rootPane, "Error");
-
-        }
-         IMessage.setText(" ");
-         int total = 0;
-      int vat = 0;
-      int sum = 0;
-     
-       DefaultTableModel model = (DefaultTableModel) tblProduct.getModel();
-      if(vatCheck.isSelected()){
-           vat = 10;
-      }
-        if(!tfID.getText().trim().equals("")){
-            model.addRow(new Object[] {tfID.getText(),cbCategory.getSelectedItem().toString(),tfPrice.getText(),tfCompany.getText(),tfQntty.getText(),vat});
-        }
-        else{
-            IMessage.setText("The product Name Should not be left blank");
-        }
+      
  
     }//GEN-LAST:event_bAddActionPerformed
 
@@ -452,27 +367,21 @@ public class AddMedicine extends javax.swing.JFrame {
 
     private void bBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBackMouseClicked
 
-       MedicineMenu medimnu = new MedicineMenu();
-        medimnu.setVisible(true);
-        medimnu.pack();
-        medimnu.setLocationRelativeTo(null);
-        medimnu.setDefaultCloseOperation(Login.EXIT_ON_CLOSE);
-        medimnu .dispose();
+      
     }//GEN-LAST:event_bBackMouseClicked
 
     private void bResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bResetActionPerformed
-        tfID.setText(null);
-        cbCategory.setSelectedItem(null);
-        tfPrice.setText(null);
-        tfCompany.setText(null);
-        tfQntty.setText(null);
-       
+        
 
     }//GEN-LAST:event_bResetActionPerformed
 
     private void vatCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vatCheckActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_vatCheckActionPerformed
+
+    private void ProductIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProductIDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ProductIDActionPerformed
 
     /**
      * @param args the command line arguments
@@ -511,6 +420,7 @@ public class AddMedicine extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel IMessage;
+    private javax.swing.JTextField ProductID;
     private javax.swing.JButton bAdd;
     private javax.swing.JButton bBack;
     private javax.swing.JButton bDelete;
@@ -529,7 +439,6 @@ public class AddMedicine extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblProduct;
     private javax.swing.JTextField tfCompany;
-    private javax.swing.JTextField tfID;
     private javax.swing.JTextField tfPrice;
     private javax.swing.JTextField tfQntty;
     private javax.swing.JCheckBox vatCheck;
