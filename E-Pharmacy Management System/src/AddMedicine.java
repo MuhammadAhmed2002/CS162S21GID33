@@ -42,23 +42,23 @@ public class AddMedicine extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         ProductID = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        cbCategory = new javax.swing.JComboBox<>();
+        MedicineCategory = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
-        tfPrice = new javax.swing.JTextField();
+        MedicinePrice = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        tfQntty = new javax.swing.JTextField();
-        vatCheck = new javax.swing.JCheckBox();
-        bDelete = new javax.swing.JButton();
-        bUpdate = new javax.swing.JButton();
-        bAdd = new javax.swing.JButton();
+        MedicineQuantity = new javax.swing.JTextField();
+        vatStatusCheck = new javax.swing.JCheckBox();
+        btnDelete = new javax.swing.JButton();
+        btnUpdate = new javax.swing.JButton();
+        btnAdd = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblProduct = new javax.swing.JTable();
         bBack = new javax.swing.JButton();
         IMessage = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        tfCompany = new javax.swing.JTextField();
-        bReset = new javax.swing.JButton();
+        CompanyName = new javax.swing.JTextField();
+        btnReset = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -99,8 +99,8 @@ public class AddMedicine extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(228, 241, 254));
         jLabel1.setText("Medicine Name: ");
 
-        cbCategory.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        cbCategory.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Napa", "Histachin", "Napa Extra", "Paracitamol", "Seclo" }));
+        MedicineCategory.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        MedicineCategory.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Napa", "Histachin", "Napa Extra", "Paracitamol", "Seclo" }));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(228, 241, 254));
@@ -110,40 +110,40 @@ public class AddMedicine extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(228, 241, 254));
         jLabel3.setText("QUANTITY : ");
 
-        vatCheck.setBackground(new java.awt.Color(0, 0, 0));
-        vatCheck.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        vatCheck.setForeground(new java.awt.Color(228, 241, 254));
-        vatCheck.setText("VAT");
-        vatCheck.addActionListener(new java.awt.event.ActionListener() {
+        vatStatusCheck.setBackground(new java.awt.Color(0, 0, 0));
+        vatStatusCheck.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        vatStatusCheck.setForeground(new java.awt.Color(228, 241, 254));
+        vatStatusCheck.setText("VAT");
+        vatStatusCheck.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                vatCheckActionPerformed(evt);
+                vatStatusCheckActionPerformed(evt);
             }
         });
 
-        bDelete.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        bDelete.setText("DELETE");
-        bDelete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        bDelete.addActionListener(new java.awt.event.ActionListener() {
+        btnDelete.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnDelete.setText("DELETE");
+        btnDelete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bDeleteActionPerformed(evt);
+                btnDeleteActionPerformed(evt);
             }
         });
 
-        bUpdate.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        bUpdate.setText("UPDATE");
-        bUpdate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        bUpdate.addActionListener(new java.awt.event.ActionListener() {
+        btnUpdate.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnUpdate.setText("UPDATE");
+        btnUpdate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bUpdateActionPerformed(evt);
+                btnUpdateActionPerformed(evt);
             }
         });
 
-        bAdd.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        bAdd.setText("ADD");
-        bAdd.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        bAdd.addActionListener(new java.awt.event.ActionListener() {
+        btnAdd.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnAdd.setText("ADD");
+        btnAdd.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bAddActionPerformed(evt);
+                btnAddActionPerformed(evt);
             }
         });
 
@@ -184,34 +184,34 @@ public class AddMedicine extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(228, 241, 254));
         jLabel7.setText("Company Name: ");
 
-        bReset.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        bReset.setText("RESET");
-        bReset.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        bReset.addActionListener(new java.awt.event.ActionListener() {
+        btnReset.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnReset.setText("RESET");
+        btnReset.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnReset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bResetActionPerformed(evt);
+                btnResetActionPerformed(evt);
             }
         });
 
         jDesktopPane1.setLayer(jLabel5, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(ProductID, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(cbCategory, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(MedicineCategory, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(tfPrice, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(MedicinePrice, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(tfQntty, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(vatCheck, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(bDelete, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(bUpdate, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(bAdd, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(MedicineQuantity, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(vatStatusCheck, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(btnDelete, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(btnUpdate, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(btnAdd, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(bBack, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(IMessage, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jLabel6, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jLabel7, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(tfCompany, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(bReset, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(CompanyName, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(btnReset, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
@@ -223,11 +223,11 @@ public class AddMedicine extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                                .addComponent(bAdd)
+                                .addComponent(btnAdd)
                                 .addGap(18, 18, 18)
-                                .addComponent(bUpdate)
+                                .addComponent(btnUpdate)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(bReset))
+                                .addComponent(btnReset))
                             .addComponent(IMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jDesktopPane1Layout.createSequentialGroup()
                         .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -242,9 +242,9 @@ public class AddMedicine extends javax.swing.JFrame {
                                 .addComponent(jLabel6)
                                 .addGap(22, 22, 22)))
                         .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(tfCompany)
-                            .addComponent(tfQntty, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
-                            .addComponent(vatCheck, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(CompanyName)
+                            .addComponent(MedicineQuantity, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                            .addComponent(vatStatusCheck, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jDesktopPane1Layout.createSequentialGroup()
                         .addGap(42, 42, 42)
                         .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -259,7 +259,7 @@ public class AddMedicine extends javax.swing.JFrame {
                                 .addComponent(bBack)
                                 .addGap(75, 75, 75))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane1Layout.createSequentialGroup()
-                                .addComponent(bDelete)
+                                .addComponent(btnDelete)
                                 .addGap(432, 432, 432))))
                     .addGroup(jDesktopPane1Layout.createSequentialGroup()
                         .addComponent(jScrollPane1)
@@ -270,9 +270,9 @@ public class AddMedicine extends javax.swing.JFrame {
                     .addComponent(jLabel1)
                     .addGap(18, 18, 18)
                     .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(cbCategory, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(MedicineCategory, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(ProductID, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
-                        .addComponent(tfPrice, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE))
+                        .addComponent(MedicinePrice, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE))
                     .addContainerGap(530, Short.MAX_VALUE)))
         );
         jDesktopPane1Layout.setVerticalGroup(
@@ -287,27 +287,27 @@ public class AddMedicine extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel7)
-                            .addComponent(tfCompany, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(CompanyName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
-                            .addComponent(tfQntty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(MedicineQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel6)
                         .addGap(7, 7, 7)
-                        .addComponent(vatCheck)
+                        .addComponent(vatStatusCheck)
                         .addGap(18, 18, 18)
                         .addComponent(IMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(27, 27, 27)
                         .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(bAdd)
-                            .addComponent(bUpdate)
-                            .addComponent(bReset))
+                            .addComponent(btnAdd)
+                            .addComponent(btnUpdate)
+                            .addComponent(btnReset))
                         .addGap(37, 37, 37))
                     .addGroup(jDesktopPane1Layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(bDelete)
+                        .addComponent(btnDelete)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
                         .addComponent(bBack)
                         .addGap(23, 23, 23))))
@@ -318,9 +318,9 @@ public class AddMedicine extends javax.swing.JFrame {
                     .addGap(18, 18, 18)
                     .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel1)
-                        .addComponent(cbCategory, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(MedicineCategory, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGap(18, 18, 18)
-                    .addComponent(tfPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MedicinePrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(296, Short.MAX_VALUE)))
         );
 
@@ -342,42 +342,101 @@ public class AddMedicine extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void bDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDeleteActionPerformed
+    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
 
-        
-    }//GEN-LAST:event_bDeleteActionPerformed
+         DefaultTableModel model = (DefaultTableModel) tblProduct.getModel();
+        if(tblProduct.getSelectedRow() == -1){
+            if(tblProduct.getRowCount() == 0){
+                IMessage.setText("Table is Empty.");
+            }
+            else
+            {
+                IMessage.setText("You must Selected a Product.");
+            }
+        }
+        else
+        {
+            model.removeRow(tblProduct.getSelectedRow());
+        }
+    }//GEN-LAST:event_btnDeleteActionPerformed
 
-    private void bUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bUpdateActionPerformed
-
+    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+     DefaultTableModel model = (DefaultTableModel) tblProduct.getModel();
+        if(tblProduct.getSelectedRow() == -1){
+            if(tblProduct.getRowCount() == 0){
+                IMessage.setText("Table is Empty.");
+            }
+            else
+            {
+                IMessage.setText("You must Selected a Product.");
+            }
+        }
+        else
+        {
+            model.setValueAt(ProductID.getText(), tblProduct.getSelectedRow(), 0);
+            model.setValueAt(MedicineCategory.getSelectedItem().toString(), tblProduct.getSelectedRow(), 1);
+            model.setValueAt(MedicinePrice.getText(), tblProduct.getSelectedRow(), 2);
+            model.setValueAt(CompanyName.getText(), tblProduct.getSelectedRow(), 3);
+            model.setValueAt(MedicineQuantity.getText(), tblProduct.getSelectedRow(), 4);
+        }    
      
-    }//GEN-LAST:event_bUpdateActionPerformed
+    }//GEN-LAST:event_btnUpdateActionPerformed
 
-    private void bAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAddActionPerformed
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
     
          
-            
+            IMessage.setText(" ");
+         int total = 0;
+      int vat = 0;
+      int sum = 0;
+     
+       DefaultTableModel model = (DefaultTableModel) tblProduct.getModel();
+      if(vatStatusCheck.isSelected()){
+           vat = 10;
+      }
+        if(!ProductID.getText().trim().equals("")){
+            model.addRow(new Object[] {ProductID.getText(),MedicineCategory.getSelectedItem().toString(),MedicinePrice.getText(),CompanyName.getText(),MedicineQuantity.getText(),vat});
+        }
+        else{
+            IMessage.setText("The product Name Should not be left blank");
+        }
+
       
  
-    }//GEN-LAST:event_bAddActionPerformed
+    }//GEN-LAST:event_btnAddActionPerformed
 
     private void tblProductMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblProductMouseClicked
 
-        
+        DefaultTableModel model = (DefaultTableModel) tblProduct.getModel();
+        ProductID.setText(model.getValueAt(tblProduct.getSelectedRow(),0).toString());
+        MedicineCategory.setSelectedItem(model.getValueAt(tblProduct.getSelectedRow(),1).toString());
+        MedicinePrice.setText(model.getValueAt(tblProduct.getSelectedRow(),2).toString());
+        CompanyName.setText(model.getValueAt(tblProduct.getSelectedRow(),3).toString());
+        MedicineQuantity.setText(model.getValueAt(tblProduct.getSelectedRow(),4).toString());
     }//GEN-LAST:event_tblProductMouseClicked
 
     private void bBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBackMouseClicked
-
+        MedicineMenu rgf = new MedicineMenu();
+        rgf.setVisible(true);
+        rgf.pack();
+        rgf.setLocationRelativeTo(null);
+        rgf.setDefaultCloseOperation(Login.EXIT_ON_CLOSE);
+        this .dispose();
       
     }//GEN-LAST:event_bBackMouseClicked
 
-    private void bResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bResetActionPerformed
+    private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
         
+        ProductID.setText(null);
+        MedicineCategory.setSelectedItem(null);
+        MedicinePrice.setText(null);
+        CompanyName.setText(null);
+        MedicineQuantity.setText(null);
+    }//GEN-LAST:event_btnResetActionPerformed
 
-    }//GEN-LAST:event_bResetActionPerformed
-
-    private void vatCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vatCheckActionPerformed
+    private void vatStatusCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vatStatusCheckActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_vatCheckActionPerformed
+    }//GEN-LAST:event_vatStatusCheckActionPerformed
 
     private void ProductIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProductIDActionPerformed
         // TODO add your handling code here:
@@ -419,14 +478,17 @@ public class AddMedicine extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField CompanyName;
     private javax.swing.JLabel IMessage;
+    private javax.swing.JComboBox<String> MedicineCategory;
+    private javax.swing.JTextField MedicinePrice;
+    private javax.swing.JTextField MedicineQuantity;
     private javax.swing.JTextField ProductID;
-    private javax.swing.JButton bAdd;
     private javax.swing.JButton bBack;
-    private javax.swing.JButton bDelete;
-    private javax.swing.JButton bReset;
-    private javax.swing.JButton bUpdate;
-    private javax.swing.JComboBox<String> cbCategory;
+    private javax.swing.JButton btnAdd;
+    private javax.swing.JButton btnDelete;
+    private javax.swing.JButton btnReset;
+    private javax.swing.JButton btnUpdate;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -438,9 +500,6 @@ public class AddMedicine extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblProduct;
-    private javax.swing.JTextField tfCompany;
-    private javax.swing.JTextField tfPrice;
-    private javax.swing.JTextField tfQntty;
-    private javax.swing.JCheckBox vatCheck;
+    private javax.swing.JCheckBox vatStatusCheck;
     // End of variables declaration//GEN-END:variables
 }

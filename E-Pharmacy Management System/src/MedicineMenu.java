@@ -6,7 +6,7 @@
 
 /**
  *
- * @author Akram
+ * @author 
  */
 public class MedicineMenu extends javax.swing.JFrame {
 

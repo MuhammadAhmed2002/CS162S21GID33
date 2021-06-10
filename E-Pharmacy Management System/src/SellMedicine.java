@@ -12,7 +12,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Akram
+ * @author
  */
 public class SellMedicine extends javax.swing.JFrame {
 

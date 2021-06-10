@@ -6,7 +6,7 @@
 
 /**
  *
- * @author Akram
+ * @author 
  */
 public class Registar extends javax.swing.JFrame {
 

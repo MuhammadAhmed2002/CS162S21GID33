@@ -90,11 +90,11 @@
                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="bAdd" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnAdd" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="bUpdate" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnUpdate" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="bReset" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnReset" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Component id="IMessage" alignment="0" min="-2" pref="268" max="-2" attributes="0"/>
                           </Group>
@@ -116,9 +116,9 @@
                               </Group>
                           </Group>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="tfCompany" alignment="0" max="32767" attributes="0"/>
-                              <Component id="tfQntty" alignment="0" pref="166" max="32767" attributes="0"/>
-                              <Component id="vatCheck" alignment="0" max="32767" attributes="0"/>
+                              <Component id="CompanyName" alignment="0" max="32767" attributes="0"/>
+                              <Component id="MedicineQuantity" alignment="0" pref="166" max="32767" attributes="0"/>
+                              <Component id="vatStatusCheck" alignment="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -139,7 +139,7 @@
                                   <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="bDelete" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnDelete" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="432" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -156,9 +156,9 @@
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="cbCategory" alignment="0" max="32767" attributes="0"/>
+                          <Component id="MedicineCategory" alignment="0" max="32767" attributes="0"/>
                           <Component id="ProductID" alignment="1" pref="161" max="32767" attributes="0"/>
-                          <Component id="tfPrice" alignment="1" pref="161" max="32767" attributes="0"/>
+                          <Component id="MedicinePrice" alignment="1" pref="161" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace pref="530" max="32767" attributes="0"/>
                   </Group>
@@ -177,31 +177,31 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="tfCompany" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="CompanyName" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="tfQntty" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="MedicineQuantity" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                          <Component id="vatCheck" min="-2" max="-2" attributes="0"/>
+                          <Component id="vatStatusCheck" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="IMessage" min="-2" pref="35" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="bAdd" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="bUpdate" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="bReset" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnAdd" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnUpdate" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnReset" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="jScrollPane1" min="-2" pref="236" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="bDelete" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnDelete" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="73" max="32767" attributes="0"/>
                           <Component id="bBack" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
@@ -215,10 +215,10 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="cbCategory" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="MedicineCategory" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="tfPrice" min="-2" max="-2" attributes="0"/>
+                      <Component id="MedicinePrice" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="296" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -253,7 +253,7 @@
             <Property name="text" type="java.lang.String" value="Medicine Name: "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="cbCategory">
+        <Component class="javax.swing.JComboBox" name="MedicineCategory">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="1"/>
@@ -283,7 +283,7 @@
             <Property name="text" type="java.lang.String" value="Price :"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="tfPrice">
+        <Component class="javax.swing.JTextField" name="MedicinePrice">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
@@ -296,9 +296,9 @@
             <Property name="text" type="java.lang.String" value="QUANTITY : "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="tfQntty">
+        <Component class="javax.swing.JTextField" name="MedicineQuantity">
         </Component>
-        <Component class="javax.swing.JCheckBox" name="vatCheck">
+        <Component class="javax.swing.JCheckBox" name="vatStatusCheck">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
@@ -312,10 +312,10 @@
             <Property name="text" type="java.lang.String" value="VAT"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="vatCheckActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="vatStatusCheckActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="bDelete">
+        <Component class="javax.swing.JButton" name="btnDelete">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="18" style="1"/>
@@ -326,10 +326,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bDeleteActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDeleteActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="bUpdate">
+        <Component class="javax.swing.JButton" name="btnUpdate">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="18" style="1"/>
@@ -340,10 +340,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bUpdateActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUpdateActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="bAdd">
+        <Component class="javax.swing.JButton" name="btnAdd">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="18" style="1"/>
@@ -354,7 +354,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bAddActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddActionPerformed"/>
           </Events>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -384,6 +384,48 @@
                     <Column editable="true" title="Vat" type="java.lang.Object"/>
                     <Column editable="true" title="Exp Date" type="java.lang.Object"/>
                   </Table>
+                </Property>
+                <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                  <TableColumnModel selectionModel="0">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                  </TableColumnModel>
+                </Property>
+                <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                  <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                 </Property>
               </Properties>
               <Events>
@@ -438,9 +480,9 @@
             <Property name="text" type="java.lang.String" value="Company Name: "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="tfCompany">
+        <Component class="javax.swing.JTextField" name="CompanyName">
         </Component>
-        <Component class="javax.swing.JButton" name="bReset">
+        <Component class="javax.swing.JButton" name="btnReset">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="18" style="1"/>
@@ -451,7 +493,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bResetActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnResetActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
