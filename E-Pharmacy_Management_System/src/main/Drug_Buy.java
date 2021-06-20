@@ -20,7 +20,7 @@ import domain.UserPojo;
 
 /**
  *
- * @author ahmed
+ * @author Hemaa
  */
 public class Drug_Buy extends javax.swing.JFrame {
 Connection con = null;

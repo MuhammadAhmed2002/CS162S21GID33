@@ -18,7 +18,7 @@ import net.proteanit.sql.DbUtils;
 
 /**
  *
- * @author ahmed
+ * @author Hemaa
  */
 public class Company extends javax.swing.JFrame {
 //Connection con = null;

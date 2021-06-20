@@ -15,7 +15,7 @@ import net.proteanit.sql.DbUtils;
 
 /**
  *
- * @author mohsy
+ * @author Hemaa
  */
 public class DrugList extends javax.swing.JFrame {
 Connection con = null;
