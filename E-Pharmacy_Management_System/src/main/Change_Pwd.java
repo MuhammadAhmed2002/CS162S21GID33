@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Hemaa
+ * @author mohsin
  */
 public class Change_Pwd extends javax.swing.JFrame {
 Connection con = null;
