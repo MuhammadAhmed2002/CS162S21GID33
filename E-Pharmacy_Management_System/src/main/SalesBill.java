@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+//@author mohsin
 package main;
 
 import java.sql.Connection;
@@ -13,7 +14,7 @@ import net.proteanit.sql.DbUtils;
 
 /**
  *
- * @author Hemaa
+ * @author ahmed
  */
 public class SalesBill extends javax.swing.JFrame {
 Connection con = null;
@@ -22,7 +23,7 @@ ResultSet res = null;
 int rest_drug ;
     public SalesBill() {
         initComponents();
-        con=Connect.getInstance();
+        con=Connection_db.getInstance();
     }
 
     /**
@@ -57,9 +58,9 @@ int rest_drug ;
         setTitle("Sale Bill");
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel1.setBackground( java.awt.Color.green);
 
-        jPanel2.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel2.setBackground( java.awt.Color.pink);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Sale_Bill Form");
@@ -334,12 +335,12 @@ else {
         String PRICE = res.getString("SELLING_PRICE");
         double AMOUNT = Integer.parseInt(quantity.getSelectedItem().toString()) * Integer.parseInt(PRICE);
         rest_drug = Integer.parseInt(res.getString("QUANTITY")) - Integer.parseInt(quantity.getSelectedItem().toString());
-        String sql1 = "insert into sales (BARCODE,NAME,TYPE,DOSE,QUANTITY,PRICE,AMOUNT,DATE) values ('"+Barcode+"','"+NAME+"' ,'"+TYPE+"','"+DOSE+"','"+quantity.getSelectedItem()+"','"+PRICE+"','"+AMOUNT+"','"+Pharmacy.today.getText()+"')" ;
+        String sql1 = "insert into sales (BARCODE,NAME,TYPE,DOSE,QUANTITY,PRICE,AMOUNT,DATE) values ('"+Barcode+"','"+NAME+"' ,'"+TYPE+"','"+DOSE+"','"+quantity.getSelectedItem()+"','"+PRICE+"','"+AMOUNT+"','"+MyPharmacy.today.getText()+"')" ;
         pre=con.prepareStatement(sql1);
         pre.execute();
         refresh();
         update_quantity();
-String sql2 = "insert into history_sales (USER_NAME,BARCODE,NAME,TYPE,DOSE,QUANTITY,PRICE,AMOUNT,DATE,TIME) values ('"+Pharmacy.username1.getText()+"','"+Barcode+"','"+NAME+"' ,'"+TYPE+"','"+DOSE+"','"+quantity.getSelectedItem()+"','"+PRICE+"','"+AMOUNT+"','"+Pharmacy.today.getText()+"','"+Pharmacy.time.getText()+"' )" ;       
+String sql2 = "insert into history_sales (USER_NAME,BARCODE,NAME,TYPE,DOSE,QUANTITY,PRICE,AMOUNT,DATE,TIME) values ('"+MyPharmacy.username1.getText()+"','"+Barcode+"','"+NAME+"' ,'"+TYPE+"','"+DOSE+"','"+quantity.getSelectedItem()+"','"+PRICE+"','"+AMOUNT+"','"+MyPharmacy.today.getText()+"','"+MyPharmacy.time.getText()+"' )" ;       
 pre=con.prepareStatement(sql2);
 pre.execute();
 get_Total();

@@ -67,9 +67,9 @@ CompanyDAOImpl companyDao;
         setTitle("Company");
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel1.setBackground(java.awt.Color.green);
 
-        jPanel2.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel2.setBackground( java.awt.Color.pink);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Company_Form");
@@ -348,7 +348,7 @@ if(name.getText().equals("")||address.getText().equals("")||phone.getText().equa
   CompanyPojo companyPojo = new CompanyPojo(name.getText(),address.getText(),phone.getText());
   try{
 	  companyDao.update(companyPojo);
-    JOptionPane.showMessageDialog(null,"Company_Information has been Saved Successfully","Success Operation",1);
+    JOptionPane.showMessageDialog(null,"Company_Information has been Updated Successfully","Success Operation",1);
   companylist();
   clear();}catch(Exception e){
 	  e.printStackTrace();

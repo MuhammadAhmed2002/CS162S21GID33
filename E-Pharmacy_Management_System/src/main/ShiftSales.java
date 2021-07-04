@@ -1,8 +1,10 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+//@author mohsin
 package main;
 
 import java.sql.Connection;
@@ -18,7 +20,7 @@ PreparedStatement pre= null;
 ResultSet res = null;
     public ShiftSales() {
         initComponents();
-        con=Connect.getInstance();
+        con=Connection_db.getInstance();
         fill_Username();
     }
 
@@ -54,9 +56,9 @@ ResultSet res = null;
         setTitle("Shift Sales");
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel1.setBackground(java.awt.Color.green);
 
-        jPanel2.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel2.setBackground( java.awt.Color.pink);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Shift Sales Form");

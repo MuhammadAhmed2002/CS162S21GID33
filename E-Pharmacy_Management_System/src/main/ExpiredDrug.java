@@ -15,7 +15,7 @@ ResultSet res = null;
     
     public ExpiredDrug() {
         initComponents();
-        con=Connect.getInstance();
+        con=Connection_db.getInstance();
         show_table();
     }
 
@@ -39,9 +39,9 @@ ResultSet res = null;
         setTitle("Expired Drug List");
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel1.setBackground( java.awt.Color.green);
 
-        jPanel2.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel2.setBackground(java.awt.Color.pink);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Expired_Drugs");

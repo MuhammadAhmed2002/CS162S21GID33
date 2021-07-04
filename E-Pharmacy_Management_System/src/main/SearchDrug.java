@@ -8,7 +8,7 @@ import net.proteanit.sql.DbUtils;
 
 /**
  *
- * @author Hemaa
+ * @author mohsin
  */
 public class SearchDrug extends javax.swing.JFrame {
 Connection con = null;
@@ -16,7 +16,7 @@ PreparedStatement pre= null;
 ResultSet res = null;
     public SearchDrug() {
         initComponents();
-        con=Connect.getInstance();
+        con=Connection_db.getInstance();
     }
 
     /**
@@ -45,9 +45,9 @@ ResultSet res = null;
         setTitle("Search Drug Form");
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel1.setBackground(java.awt.Color.green);
 
-        jPanel2.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel2.setBackground( java.awt.Color.pink);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Search Drug");
@@ -69,7 +69,7 @@ ResultSet res = null;
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
-        jPanel3.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel3.setBackground( java.awt.Color.green);
         jPanel3.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 255)));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N

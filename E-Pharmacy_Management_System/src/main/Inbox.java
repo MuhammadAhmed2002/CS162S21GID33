@@ -15,7 +15,7 @@ import javax.swing.ImageIcon;
 
 /**
  *
- * @author Hemaa
+ * @author mohsin
  */
 public class Inbox extends javax.swing.JFrame {
 Connection con = null;
@@ -24,7 +24,7 @@ ResultSet res = null;
 ArrayList<String> arr ;    
     public Inbox() {
         initComponents();
-        con=Connect.getInstance();
+        con=Connection_db.getInstance();
         fill_Username();
         arr = new ArrayList();
     }
@@ -53,7 +53,7 @@ ArrayList<String> arr ;
         setResizable(false);
         getContentPane().setLayout(null);
 
-        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel1.setBackground(java.awt.Color.pink);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Inbox Form");
@@ -162,7 +162,7 @@ ArrayList<String> arr ;
     }// </editor-fold>//GEN-END:initComponents
 
     private void usernameItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_usernameItemStateChanged
-   String sql = " select * from inbox where (MESSAGE_FROM= '"+Pharmacy.username1.getText()+"' and MESSAGE_TO='"+username.getSelectedItem()+"') or (MESSAGE_FROM= '"+username.getSelectedItem()+"' and MESSAGE_TO='"+Pharmacy.username1.getText()+"') ";
+   String sql = " select * from inbox where (MESSAGE_FROM= '"+MyPharmacy.username1.getText()+"' and MESSAGE_TO='"+username.getSelectedItem()+"') or (MESSAGE_FROM= '"+username.getSelectedItem()+"' and MESSAGE_TO='"+MyPharmacy.username1.getText()+"') ";
        try {
         pre=con.prepareStatement(sql);
         res=pre.executeQuery();  
@@ -174,7 +174,7 @@ ArrayList<String> arr ;
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 this.dispose();
-new Send().setVisible(true);
+new Send_Msg().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -229,7 +229,7 @@ private void fill_Username(){
         pre=con.prepareStatement(sql);
         res=pre.executeQuery();
         while(res.next()){
-          if(!(res.getString("NAME").equals(Pharmacy.username1.getText()))){
+          if(!(res.getString("NAME").equals(MyPharmacy.username1.getText()))){
            username.addItem(res.getString("NAME"));   
           }  
         }

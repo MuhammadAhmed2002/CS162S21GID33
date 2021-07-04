@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author mohsin
+ * @author mohsy
  */
 public class Change_Pwd extends javax.swing.JFrame {
 Connection con = null;
@@ -21,7 +21,7 @@ PreparedStatement pre = null;
 ResultSet res= null;
     public Change_Pwd() {
         initComponents();
-        con=Connect.getInstance();
+        con=Connection_db.getInstance();
         id.setText(Login.id.getText());
         confirmed.setVisible(false);
         we_st.setVisible(false);
@@ -59,9 +59,9 @@ ResultSet res= null;
         setTitle("Change Password");
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel1.setBackground(java.awt.Color.green);
 
-        jPanel2.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel2.setBackground( java.awt.Color.pink);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel5.setText("Change_Password_Form");

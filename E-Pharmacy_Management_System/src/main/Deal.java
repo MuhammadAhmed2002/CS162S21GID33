@@ -13,7 +13,7 @@ import net.proteanit.sql.DbUtils;
 
 /**
  *
- * @author Hemaa
+ * @author mohsy
  */
 public class Deal extends javax.swing.JFrame {
 Connection con = null;
@@ -22,7 +22,7 @@ ResultSet res= null;
     
     public Deal() {
         initComponents();
-        con=Connect.getInstance();
+        con=Connection_db.getInstance();
         show_List();
     }
 
@@ -46,9 +46,9 @@ ResultSet res= null;
         setTitle("Deals List");
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel1.setBackground(java.awt.Color.green);
 
-        jPanel2.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel2.setBackground(java.awt.Color.pink);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Deals_List Form");

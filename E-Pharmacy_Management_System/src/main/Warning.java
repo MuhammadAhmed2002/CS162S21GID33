@@ -7,7 +7,7 @@ package main;
 
 /**
  *
- * @author Hemaa
+ * @author mohsin
  */
 public class Warning extends javax.swing.JFrame {
 
@@ -17,7 +17,7 @@ public class Warning extends javax.swing.JFrame {
     public Warning() {
         initComponents();
         this.setLocation(0,520);
-        if(Pharmacy.ex==1){
+        if(MyPharmacy.ex==1){
             jLabel4.setText("close to expire");
         }else {
            jLabel4.setText("already Expired"); 
@@ -48,9 +48,9 @@ public class Warning extends javax.swing.JFrame {
         setMaximizedBounds(new java.awt.Rectangle(0, 0, 0, 0));
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel1.setBackground(java.awt.Color.green);
 
-        jPanel2.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel2.setBackground( java.awt.Color.pink);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Warning_Form");
