@@ -15,7 +15,7 @@ import javax.swing.ImageIcon;
 
 /**
  *
- * @author Hemaa
+ * @author mohsin
  */
 public class Login extends javax.swing.JFrame {
 Connection con = null;
@@ -25,8 +25,8 @@ static String NAME;
     public Login() {
     	setIconImage(Toolkit.getDefaultToolkit().getImage(Login.class.getResource("/img/Untitled.png")));
         initComponents();
-        con=Connect.getInstance();
-        new changestyle().chabgelock();
+        con=Connection_db.getInstance();
+        new changestyle_pharmacy().chabgelock();
         SwingUtilities.updateComponentTreeUI(this);
         login_Hold();
     }
@@ -60,9 +60,9 @@ static String NAME;
         setTitle("Login");
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel1.setBackground( java.awt.Color.green );
 
-        jPanel2.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel2.setBackground( java.awt.Color.pink);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Login Form");
@@ -86,7 +86,7 @@ static String NAME;
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/login.png"))); // NOI18N
 
-        jPanel3.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel3.setBackground( java.awt.Color.green );
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Login Information", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -148,7 +148,7 @@ static String NAME;
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel4.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel4.setBackground( java.awt.Color.green );
         jPanel4.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 255)));
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -188,12 +188,11 @@ static String NAME;
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
-        jPanel5.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel5.setBackground( java.awt.Color.green );
         jPanel5.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 255)));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel5.setText("Note : Password should be at least 6 Characters ");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -242,7 +241,7 @@ static String NAME;
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(8, 8, 8)
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(22, Short.MAX_VALUE))
+                        .addContainerGap(37, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
@@ -280,7 +279,7 @@ if(id.getText().equals("")||pass.getText().equals("")){
         if(res.next()){
         NAME=res.getString("NAME");
             if(res.getString("PASSWORD").equals(pass.getText())){
-                Pharmacy pharmacy = new Pharmacy();
+                MyPharmacy pharmacy = new MyPharmacy();
                 if(id.getText().equals("1")){
                 this.dispose();
                 pharmacy.setVisible(true);        
@@ -295,7 +294,9 @@ if(id.getText().equals("")||pass.getText().equals("")){
         JOptionPane.showMessageDialog(null,"Wrong ID","Failed Access",2);
         }
         
+        
     }catch(Exception e){
+        e.printStackTrace();
         JOptionPane.showMessageDialog(null,e.getMessage(),"Error",2);
     }
 }
