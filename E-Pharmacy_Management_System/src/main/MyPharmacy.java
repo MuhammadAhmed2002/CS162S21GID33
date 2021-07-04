@@ -648,28 +648,28 @@ public class MyPharmacy extends javax.swing.JFrame {
         jPanel1.add(movedrug1);
         movedrug1.setBounds(860, 310, 150, 31);
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/rsz_1rsz_16314569-telephone-round-gray-web-icon-on-black-background-stock-photo-phone.jpg"))); // NOI18N
-        jLabel6.setText("jLabel6");
+        //jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/rsz_1rsz_16314569-telephone-round-gray-web-icon-on-black-background-stock-photo-phone.jpg"))); // NOI18N
+        //jLabel6.setText("jLabel6");
         jPanel1.add(jLabel6);
         jLabel6.setBounds(0, 450, 80, 80);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel7.setText("045/3397825");
+       // jLabel7.setText("");
         jPanel1.add(jLabel7);
         jLabel7.setBounds(90, 490, 390, 29);
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel8.setText("+92-3374677342 / +92-3009474238");
+        jLabel8.setText("E-Pharmacy Management ");
         jPanel1.add(jLabel8);
         jLabel8.setBounds(90, 450, 390, 29);
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel9.setText("LAHORE / UET / SABZAZAR");
+       // jLabel9.setText("");
         jPanel1.add(jLabel9);
         jLabel9.setBounds(120, 550, 380, 22);
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel10.setText("Location : ");
+        //jLabel10.setText(" : ");
         jPanel1.add(jLabel10);
         jLabel10.setBounds(10, 550, 105, 22);
 
